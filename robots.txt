@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Sitemap (single-page LP, but listed for completeness)
+Sitemap: https://planeopen.com/sitemap.xml

@@ -3,16 +3,111 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>planeopen — agregador open-source de tracking aéreo</title>
-  <meta name="description" content="Centralizamos provedores open-source de localização de aeronaves (ADS-B) em uma única API gratuita. Iniciativa sem fins lucrativos." />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
+  <!-- ============================ SEO ============================ -->
+  <title>planeopen — agregador open-source de tracking de aeronaves</title>
+  <meta
+    name="description"
+    content="Centralizamos provedores open-source de localização de aeronaves (ADS-B) em uma única API gratuita. ADSBExchange, OpenSky e outros normalizados em um só formato JSON. Iniciativa sem fins lucrativos."
+  />
+  <meta
+    name="keywords"
+    content="ADS-B, tracking de aviões, agregador de aeronaves, OpenSky, ADSBExchange, API de aeronaves, tracking aéreo open-source, dados públicos de aviação, planeopen"
+  />
+  <meta name="author" content="planeopen" />
+  <meta name="robots" content="index, follow, max-image-preview:large" />
+  <meta name="theme-color" content="#06080a" />
+  <link rel="canonical" href="https://planeopen.com/" />
+
+  <!-- ============================ Favicons ============================ -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+  <link rel="alternate icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+  <link rel="mask-icon" href="/favicon.svg" color="#6cf0a3" />
+
+  <!-- ============================ Open Graph ============================ -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="planeopen" />
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:url" content="https://planeopen.com/" />
+  <meta property="og:title" content="planeopen — agregador open-source de tracking de aeronaves" />
+  <meta
+    property="og:description"
+    content="Provedores open-source de ADS-B (ADSBExchange, OpenSky e outros) unificados em uma única API JSON. Iniciativa gratuita, sem fins lucrativos."
+  />
+  <meta property="og:image" content="https://planeopen.com/og-image.png" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta
+    property="og:image:alt"
+    content="planeopen — radar com aeronaves agregadas de múltiplos provedores ADS-B"
+  />
+
+  <!-- ============================ Twitter / X ============================ -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="planeopen — agregador open-source de tracking de aeronaves" />
+  <meta
+    name="twitter:description"
+    content="Provedores open-source de ADS-B unificados em uma única API gratuita."
+  />
+  <meta name="twitter:image" content="https://planeopen.com/og-image.png" />
+  <meta
+    name="twitter:image:alt"
+    content="planeopen — radar com aeronaves agregadas de múltiplos provedores ADS-B"
+  />
+
+  <!-- ============================ Fonts ============================ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@500;700;800;900&family=IBM+Plex+Mono:wght@300;400;500;600&display=swap"
     rel="stylesheet"
   />
+
+  <!-- ============================ Stylesheet ============================ -->
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- ============================ JSON-LD ============================ -->
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://planeopen.com/#org",
+          "name": "planeopen",
+          "url": "https://planeopen.com/",
+          "logo": "https://planeopen.com/logo.png",
+          "description": "Centralizador open-source de provedores públicos de localização de aeronaves (ADS-B). Iniciativa gratuita, sem fins lucrativos.",
+          "foundingDate": "2026"
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://planeopen.com/#website",
+          "url": "https://planeopen.com/",
+          "name": "planeopen",
+          "description": "Agregador open-source de provedores de localização de aeronaves (ADS-B).",
+          "publisher": { "@id": "https://planeopen.com/#org" },
+          "inLanguage": "pt-BR"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "planeopen API",
+          "applicationCategory": "DeveloperApplication",
+          "operatingSystem": "Web",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          },
+          "description": "API JSON gratuita para consultar aeronaves em tempo real, agregando múltiplos provedores ADS-B."
+        }
+      ]
+    }
+  </script>
 </head>
 <body>
   <!-- ============================== TOP BAR ============================== -->
