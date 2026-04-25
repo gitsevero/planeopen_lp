@@ -117,11 +117,15 @@
       <span class="topbar-brand">planeopen</span>
       <span class="topbar-sep">/</span>
       <span class="topbar-mut">ops</span>
+      <span class="topbar-by">
+        BY <a href="https://cave.codes" target="_blank" rel="noopener noreferrer">cave.codes</a>
+      </span>
     </div>
     <nav class="topbar-cell topbar-nav" aria-label="Seções">
       <a href="#problema">// 01 problema</a>
       <a href="#rotas">// 02 rotas</a>
       <a href="#frota">// 03 frota</a>
+      <a href="#por-que">// 04 postura</a>
     </nav>
     <div class="topbar-cell topbar-right">
       <span class="topbar-mut">UTC</span>
@@ -188,10 +192,10 @@
         </h1>
 
         <p class="hero-sub">
-          <strong>planeopen</strong> centraliza provedores
-          <em>open-source</em> de ADS-B — ADSBExchange, OpenSky e outros —
-          em uma única API. Tempo real, sem chave, sem cobrança.
-          Iniciativa gratuita, sem fins lucrativos.
+          <strong>planeopen</strong> centraliza <em>feeds públicos</em> de ADS-B
+          — ADSBExchange, OpenSky e outros — em uma única API. Tempo real,
+          sem chave, sem cobrança. Iniciativa pública mantida pelo estúdio
+          <a class="hero-sub-link" href="https://cave.codes" target="_blank" rel="noopener noreferrer">cave.codes</a>.
         </p>
 
         <div class="hero-ctas">
@@ -199,14 +203,19 @@
             <span>USAR A API GRATUITA</span>
             <span class="btn-arrow">→</span>
           </a>
-          <a class="btn btn-amber" href="https://cave.codes" target="_blank" rel="noopener noreferrer">
-            <span>IMPLEMENTAR NA MINHA INFRA</span>
+          <a class="btn btn-amber" href="#dedicada">
+            <span>INSTÂNCIA DEDICADA</span>
             <span class="btn-arrow">↗</span>
           </a>
         </div>
 
+        <p class="hero-fineprint">
+          API grátis para sempre · sem cadastro · schema documentado.
+          <span>O código não é open-source — a abertura é dos dados.</span>
+        </p>
+
         <div class="hero-tags" aria-hidden="true">
-          <span>· python · postgres · sqlite buffer · oauth2 · COPY FROM ·</span>
+          <span>// stack interna · python · postgres · sqlite buffer · oauth2 · COPY FROM</span>
         </div>
       </div>
 
@@ -362,8 +371,9 @@
         PARA <span class="accent-green">DECOLAR.</span>
       </h2>
       <p class="section-lead">
-        Você consome a API que a gente hospeda — ou pede o código e roda
-        no seu próprio servidor. Em qualquer caso, é gratuito.
+        A API pública é grátis pra qualquer pessoa. Quem precisa de
+        instância isolada, SLA ou regra específica, contrata o estúdio
+        que mantém o planeopen.
       </p>
     </header>
 
@@ -412,49 +422,60 @@
         </a>
       </article>
 
-      <!-- ROTA B : SELF HOST -->
-      <article class="path path--self">
+      <!-- ROTA B : DEDICATED INSTANCE (delivered by cave.codes) -->
+      <article class="path path--self" id="dedicada">
         <div class="path-tag path-tag--amber">
-          <i class="dot dot--amber" aria-hidden="true"></i> ROTA B · SELF-HOSTED
+          <i class="dot dot--amber" aria-hidden="true"></i> ROTA B · INSTÂNCIA DEDICADA
         </div>
-        <h3 class="path-title">Rode tudo na sua infra.</h3>
+        <h3 class="path-title">Você descreve a stack.<br />A gente entrega rodando.</h3>
         <p class="path-desc">
-          Você prefere não depender da nossa API? Solicita a implementação
-          e a gente entrega o código + ajuda a deployar no seu Postgres
-          (ou Supabase, RDS, etc).
+          Pra empresas que não podem depender da API pública: latência
+          regulada, SLA, dados isolados, regras próprias de provedor. O
+          estúdio que mantém o planeopen implanta uma instância sob medida
+          na sua nuvem.
         </p>
 
         <ul class="self-stack">
           <li>
-            <span class="ss-key">COLETOR</span>
-            <span class="ss-val">Python · loop com cadência por provedor</span>
+            <span class="ss-key">DEPLOY</span>
+            <span class="ss-val">na sua AWS / GCP / Vercel / bare metal</span>
           </li>
           <li>
-            <span class="ss-key">BUFFER</span>
-            <span class="ss-val">SQLite local · COPY FROM em batch</span>
+            <span class="ss-key">SCHEMA</span>
+            <span class="ss-val">idêntico ao da rota hosted · zero re-implementação</span>
           </li>
           <li>
-            <span class="ss-key">STORE</span>
-            <span class="ss-val">Postgres 12+ · migrations portáveis</span>
+            <span class="ss-key">PROVEDORES</span>
+            <span class="ss-val">manutenção e atualização incluídas</span>
           </li>
           <li>
-            <span class="ss-key">FRONT</span>
-            <span class="ss-val">Next.js · deploy direto na Vercel</span>
+            <span class="ss-key">SLA</span>
+            <span class="ss-val">latência, uptime e suporte por contrato</span>
           </li>
         </ul>
 
+        <div class="studio-card">
+          <div class="studio-mark">
+            <span class="studio-glyph" aria-hidden="true">◤</span>
+            <span class="studio-name">cave.codes</span>
+          </div>
+          <p class="studio-desc">
+            Estúdio de engenharia que mantém o planeopen e implanta versões
+            dedicadas. Briefing direto, sem formulário longo.
+          </p>
+        </div>
+
         <div class="self-cta-block">
-          <p class="self-cta-line">A solicitação é redirecionada para</p>
           <a
             class="btn btn-amber btn-block btn-large"
             href="https://cave.codes"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span>SOLICITAR EM cave.codes</span>
+            <span>ENCOMENDAR EM cave.codes</span>
             <span class="btn-arrow">↗</span>
           </a>
-          <p class="self-cta-fine">resposta humana, sem formulário longo.</p>
+          <p class="self-cta-fine">resposta humana — normalmente em até 48h.</p>
         </div>
       </article>
     </div>
@@ -509,23 +530,23 @@
       <div class="fleet-row fleet-row--soon">
         <div class="fleet-status">
           <i class="dot dot--idle" aria-hidden="true"></i>
-          <span>PLANEJADO</span>
+          <span>NA FILA</span>
         </div>
         <div class="fleet-name">Airplanes.live</div>
         <div class="fleet-cell">Comunidade · pós-ADSBx</div>
         <div class="fleet-cell mono">binCraft + zstd</div>
-        <div class="fleet-cell t-right mono">—</div>
+        <div class="fleet-cell t-right mono">integração a caminho</div>
       </div>
 
       <div class="fleet-row fleet-row--soon">
         <div class="fleet-status">
           <i class="dot dot--idle" aria-hidden="true"></i>
-          <span>PLANEJADO</span>
+          <span>NA FILA</span>
         </div>
         <div class="fleet-name">VRS / dump1090 públicos</div>
         <div class="fleet-cell">Receptores individuais</div>
         <div class="fleet-cell mono">JSON</div>
-        <div class="fleet-cell t-right mono">—</div>
+        <div class="fleet-cell t-right mono">integração a caminho</div>
       </div>
 
       <div class="fleet-row fleet-row--add">
@@ -533,10 +554,53 @@
           <i class="dot dot--add" aria-hidden="true">+</i>
           <span>SUGIRA</span>
         </div>
-        <div class="fleet-name muted">Outro provedor open-source?</div>
+        <div class="fleet-name muted">Outro feed público?</div>
         <div class="fleet-cell muted" style="grid-column: span 3">
-          Escreva pra cave.codes — a gente integra.
+          Escreva pra cave.codes — a gente avalia e integra.
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =================== 04 WHY API OPEN, CODE PRIVATE =================== -->
+  <section class="section why-open" id="por-que">
+    <header class="section-header">
+      <div class="section-num">// 04 — postura</div>
+      <h2 class="section-title">
+        POR QUE A API É ABERTA<br />
+        <span class="muted">E O CÓDIGO NÃO.</span>
+      </h2>
+    </header>
+
+    <div class="why-grid">
+      <div class="why-col">
+        <div class="why-key">// dados</div>
+        <p>
+          Transponders ADS-B fazem broadcast em aberto. Voluntários captam,
+          comunidades compartilham. <strong>Esses dados são públicos por natureza
+          — e devem permanecer assim.</strong> A API do planeopen é grátis pra
+          sempre, sem chave, sem cadastro.
+        </p>
+      </div>
+
+      <div class="why-col">
+        <div class="why-key">// código</div>
+        <p>
+          Manter o agregador de pé exige normalizar provedores que mudam
+          regras toda hora, lidar com rate limits e cobrir custos de infra.
+          <strong>O código fica no estúdio que opera</strong> — assim o serviço
+          não morre quando alguém sai de férias.
+        </p>
+      </div>
+
+      <div class="why-col">
+        <div class="why-key">// e se eu quiser rodar?</div>
+        <p>
+          Se você precisa de uma instância isolada — por compliance, latência
+          ou regra própria — <strong>o estúdio implanta sob medida na sua
+          infra.</strong> Mesmo schema, mesmo comportamento, com SLA. É como o
+          projeto se sustenta.
+        </p>
       </div>
     </div>
   </section>
@@ -551,12 +615,13 @@
       Os dados de aeronaves civis são <em>públicos por natureza</em> —
       transponders broadcast em aberto, voluntários captam, comunidades
       compartilham. Acreditamos que o acesso a esses dados deve permanecer
-      <strong>público, gratuito e auditável.</strong> Por isso o código é
-      aberto, a API é grátis, e nada disso depende de uma empresa.
+      <strong>público, gratuito e auditável.</strong> A API fica aberta;
+      o código fica com o estúdio que opera. <em>Abertura é dos dados,
+      não da implementação.</em>
     </p>
     <div class="manifesto-sign">
       <span class="ms-line"></span>
-      <span>planeopen · iniciativa sem fins lucrativos</span>
+      <span>planeopen · um experimento público do estúdio cave.codes</span>
     </div>
   </section>
 
@@ -566,13 +631,16 @@
       <div class="footer-brand-block">
         <div class="footer-brand">planeopen</div>
         <div class="footer-tag">
-          centralizando o céu desde <span id="footer-year">…</span>
+          um experimento público do estúdio
+          <a class="footer-studio" href="https://cave.codes" target="_blank" rel="noopener noreferrer">cave.codes</a>
+          · <span id="footer-year">…</span>
         </div>
       </div>
       <div class="footer-links" aria-label="Links">
         <a href="#rotas">API</a>
+        <a href="#dedicada">INSTÂNCIA DEDICADA</a>
         <a href="https://cave.codes" target="_blank" rel="noopener noreferrer">
-          IMPLEMENTAÇÃO
+          ESTÚDIO ↗
         </a>
       </div>
       <div class="footer-coord">
