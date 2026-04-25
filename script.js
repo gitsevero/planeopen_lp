@@ -32,18 +32,48 @@
     starsLayer.appendChild(frag);
   }
 
-  // ------------------------------------------------- UTC clock
-  const clockEl = document.getElementById("utc-clock");
+  // ------------------------------------------------- UTC clock (desktop + mobile drawer)
+  const clockEls = [
+    document.getElementById("utc-clock"),
+    document.getElementById("utc-clock-mobile"),
+  ].filter(Boolean);
   function tickClock() {
-    if (!clockEl) return;
+    if (!clockEls.length) return;
     const d = new Date();
     const hh = String(d.getUTCHours()).padStart(2, "0");
     const mm = String(d.getUTCMinutes()).padStart(2, "0");
     const ss = String(d.getUTCSeconds()).padStart(2, "0");
-    clockEl.textContent = `${hh}:${mm}:${ss}`;
+    const text = `${hh}:${mm}:${ss}`;
+    clockEls.forEach((el) => (el.textContent = text));
   }
   tickClock();
   setInterval(tickClock, 1000);
+
+  // ------------------------------------------------- Mobile menu (hamburger drawer)
+  const burger = document.querySelector(".topbar-burger");
+  const drawer = document.getElementById("mobile-menu");
+  if (burger && drawer) {
+    drawer.removeAttribute("hidden");
+
+    function setMenu(open) {
+      burger.setAttribute("aria-expanded", String(open));
+      drawer.dataset.open = String(open);
+      document.body.style.overflow = open ? "hidden" : "";
+    }
+    setMenu(false);
+
+    burger.addEventListener("click", () => {
+      setMenu(burger.getAttribute("aria-expanded") !== "true");
+    });
+    drawer.querySelectorAll("a").forEach((a) => {
+      a.addEventListener("click", () => setMenu(false));
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && burger.getAttribute("aria-expanded") === "true") {
+        setMenu(false);
+      }
+    });
+  }
 
   // ------------------------------------------------- Footer year
   const yearEl = document.getElementById("footer-year");
