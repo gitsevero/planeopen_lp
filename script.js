@@ -88,6 +88,30 @@
     });
   });
 
+  // ------------------------------------------------- Scroll-collapse topbar
+  // At top of page: 3 floating pills.
+  // After scrolling past SCROLL_TRIGGER: collapses into one 100dvw fixed bar.
+  const topbar = document.querySelector(".topbar");
+  if (topbar) {
+    const SCROLL_TRIGGER = 60;
+    let pending = false;
+    function syncTopbar() {
+      pending = false;
+      topbar.classList.toggle("is-scrolled", window.scrollY > SCROLL_TRIGGER);
+    }
+    window.addEventListener(
+      "scroll",
+      () => {
+        if (!pending) {
+          pending = true;
+          requestAnimationFrame(syncTopbar);
+        }
+      },
+      { passive: true },
+    );
+    syncTopbar();
+  }
+
   // ------------------------------------------------- Smooth scroll for in-page anchors
   document.querySelectorAll('a[href^="#"]').forEach((a) => {
     a.addEventListener("click", (e) => {
