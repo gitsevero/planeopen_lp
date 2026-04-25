@@ -1289,7 +1289,7 @@ button {
 }
 .fleet-row {
   display: grid;
-  grid-template-columns: 140px 1.4fr 1.4fr 1.2fr 0.8fr;
+  grid-template-columns: 140px 1.4fr 1.6fr 1fr;
   align-items: center;
   gap: 24px;
   padding: 22px 0;
@@ -1581,13 +1581,11 @@ button {
     grid-template-columns: 130px 1fr 1fr;
     gap: 12px 18px;
   }
-  .fleet-row > div:nth-child(4),
-  .fleet-row > div:nth-child(5) {
+  .fleet-row > div:nth-child(4) {
     grid-column: 2 / span 2;
     text-align: left;
   }
-  .fleet-row--head > div:nth-child(4),
-  .fleet-row--head > div:nth-child(5) {
+  .fleet-row--head > div:nth-child(4) {
     display: none;
   }
 }
@@ -1641,8 +1639,7 @@ button {
     gap: 4px;
     padding: 18px 0;
   }
-  .fleet-row > div:nth-child(4),
-  .fleet-row > div:nth-child(5) {
+  .fleet-row > div:nth-child(4) {
     grid-column: auto;
   }
   .fleet-row--head {
