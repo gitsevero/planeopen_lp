@@ -150,6 +150,7 @@
       <path id="traj-1" class="traj traj--green" d="M -100 720 C 300 600, 600 400, 900 380 S 1500 250, 1700 200" />
       <path id="traj-2" class="traj traj--amber" d="M -100 200 C 200 280, 500 340, 820 320 S 1300 220, 1700 80" />
       <path id="traj-3" class="traj traj--green" d="M 1700 540 C 1300 580, 900 700, 600 660 S 200 540, -100 480" />
+      <path id="traj-4" class="traj traj--green" d="M -150 80 C 250 220, 650 400, 1050 560 S 1500 760, 1800 820" />
 
       <g class="moving-plane moving-plane--green">
         <use href="#plane-icon" x="-17" y="-17" width="34" height="34" />
@@ -167,6 +168,12 @@
         <use href="#plane-icon" x="-12" y="-12" width="24" height="24" />
         <animateMotion dur="38s" repeatCount="indefinite" rotate="auto" begin="-22s">
           <mpath href="#traj-3" />
+        </animateMotion>
+      </g>
+      <g class="moving-plane moving-plane--green moving-plane--big">
+        <use href="#plane-icon" x="-21" y="-21" width="42" height="42" />
+        <animateMotion dur="26s" repeatCount="indefinite" rotate="auto" begin="-6s">
+          <mpath href="#traj-4" />
         </animateMotion>
       </g>
     </svg>
