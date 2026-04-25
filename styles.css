@@ -767,6 +767,26 @@ button {
   box-shadow: 0 0 0 1px var(--amber), 0 0 24px var(--amber-shadow);
 }
 
+.btn-ghost {
+  background: transparent;
+  color: var(--text-1);
+  border-color: var(--line-3);
+}
+.btn-ghost:hover {
+  border-color: var(--rad-green);
+  color: var(--rad-green);
+}
+
+/* live-map link nas barras de navegacao — destaque sutil em phosphor green */
+.topbar-app-link,
+.mobile-menu-app-link {
+  color: var(--rad-green) !important;
+}
+.topbar-app-link:hover,
+.mobile-menu-app-link:hover {
+  text-shadow: 0 0 12px var(--rad-green-shadow);
+}
+
 /* ============================== radar ============================== */
 .hero-radar-wrap {
   display: flex;
